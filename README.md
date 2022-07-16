@@ -5,4 +5,4 @@ Live App: https://crm-app-frontend.herokuapp.com/
 
 Live Crm-App-Backend documentation: https://crm-app-rest.herokuapp.com/swagger-ui.html
 
-Crm-App-Backend: https://github.com/mslmtrk/Crm-Application-Backend
+Crm-App-Frontend: https://github.com/mslmtrk/Crm-Application-Frontend
