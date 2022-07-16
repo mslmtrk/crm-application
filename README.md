@@ -3,7 +3,7 @@ Rest Api with login, signup and CRUD functions. Built with Spring Boot, Spring S
 
 Live App: https://crm-app-frontend.herokuapp.com/
 
-Live Crm-App-Backend documentation: https://crm-app-rest.herokuapp.com/swagger-ui.html
+Live Crm-App-Rest documentation: https://crm-app-rest.herokuapp.com/swagger-ui.html
 
 ## Technologies
 **Backend**
