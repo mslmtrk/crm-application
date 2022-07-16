@@ -6,6 +6,7 @@ Live App: https://crm-app-frontend.herokuapp.com/
 Live Crm-App-Backend documentation: https://crm-app-rest.herokuapp.com/swagger-ui.html
 
 ## Technologies
+**Backend**
 - Java 11
 - Spring Boot
 - Spring Security
@@ -13,3 +14,10 @@ Live Crm-App-Backend documentation: https://crm-app-rest.herokuapp.com/swagger-u
 - JWT Authentication
 - Spring Data JPA
 - MySQL(PostgreSQL on Heroku)
+
+**Frontend**
+- Java 11
+- Spring MVC
+- Thymeleaf
+- Hibernate Validator
+- Bootstrap
