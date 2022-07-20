@@ -1,6 +1,5 @@
 # Crm-Application-Backend
 A Rest Api with login, signup and CRUD functions. Built with Spring Boot, Spring Security, Hibernate and JWT. Used by [crm-app-frontend](https://github.com/mslmtrk/Crm-Application-Frontend).
-
 It may take a few seconds to startup the application.
 
 Live App: https://crm-app-frontend.herokuapp.com/
