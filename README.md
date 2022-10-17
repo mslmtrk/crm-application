@@ -20,6 +20,6 @@ Live Crm-App-Rest documentation: https://crm-app-rest.herokuapp.com/swagger-ui.h
 - Java 11
 - Spring MVC
 - Thymeleaf
-- Hibernate Validator
+- Java Bean Validation
 - JavaScript
 - Bootstrap
