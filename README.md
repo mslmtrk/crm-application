@@ -22,4 +22,4 @@ Live Crm-App-Rest documentation: https://crm-app-rest.herokuapp.com/swagger-ui.h
 - Thymeleaf
 - Java Bean Validation
 - JavaScript
-- Bootstrap
+- Bootstrapp
