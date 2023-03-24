@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.spring</groupId>
-	<artifactId>customer-tracker-rest-crud</artifactId>
+	<artifactId>crm-application-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>customer-tracker-rest-crud</name>
 	<description>Rest api for customer-tracker app</description>
@@ -54,14 +54,9 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-swagger2</artifactId>
-		    <version>2.9.2</version>
-		</dependency>
-		<dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-swagger-ui</artifactId>
-		    <version>2.9.2</version>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.11</version>
 		</dependency>
 			
 		<dependency>
@@ -79,5 +74,16 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>production</id>
+			<properties>
+				<spring.profiles.active>
+					production
+				</spring.profiles.active>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>

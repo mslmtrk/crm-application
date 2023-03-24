@@ -17,7 +17,7 @@ import com.spring.exception.CustomerNotFoundException;
 import com.spring.service.EntityService;
 
 @RestController
-@RequestMapping("/api") 
+@RequestMapping("/v1")
 public class CustomerRestController {
 	
 	@Autowired

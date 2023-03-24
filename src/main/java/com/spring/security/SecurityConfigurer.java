@@ -42,10 +42,9 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter{
 		http.cors().and().csrf().disable()
 		.exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
         .authorizeRequests()
-        .antMatchers("/api/auth/**").permitAll()
-        .antMatchers(HttpMethod.GET, "/api/customers").permitAll()
-        .antMatchers("/v2/api-docs/**", "/swagger-ui.html/**", "/configuration/ui",
-        		"/swagger-resources/**", "/configuration/security", "/webjars/**").permitAll()
+        .antMatchers("/v1/auth/**").permitAll()
+        .antMatchers(HttpMethod.GET, "/v1/customers").permitAll()
+        .antMatchers("/swagger-ui.html/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
         .anyRequest().authenticated()
         .and()
         .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)

@@ -26,7 +26,7 @@ import com.spring.payload.MessageResponse;
 import com.spring.security.jwt.JwtUtils;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/v1/auth")
 public class AuthenticationController {
 	
 	@Autowired
