@@ -1,10 +1,9 @@
 # Crm-Application-Backend
-A Rest Api with login, signup and CRUD functions. Built with Spring Boot, Spring Security, Hibernate and JWT. Used by [crm-app-frontend](https://github.com/mslmtrk/Crm-Application-Frontend).
-It may take a few seconds to startup the application.
+A Rest Api with login, signup and CRUD functions. It is used by [the frontend side](https://github.com/mslmtrk/Crm-Application-Frontend) of the application and deployed to AWS.
 
-Live App: https://crm-app-frontend.herokuapp.com/
+Live App: http://crm-frontend.eu-central-1.elasticbeanstalk.com/
 
-Live Crm-App-Rest documentation: https://crm-app-rest.herokuapp.com/swagger-ui.html
+Live Api Documentation: http://crm-backend.eu-central-1.elasticbeanstalk.com/api/swagger-ui/index.html
 
 ## Technologies
 **Backend**
@@ -12,14 +11,8 @@ Live Crm-App-Rest documentation: https://crm-app-rest.herokuapp.com/swagger-ui.h
 - Spring Boot
 - Spring Security
 - Hibernate
-- JWT Authentication
 - Spring Data JPA
-- MySQL(PostgreSQL on Heroku)
-
-**Frontend**
-- Java 11
-- Spring MVC
-- Thymeleaf
-- Java Bean Validation
-- JavaScript
-- Bootstrap
+- JWT
+- MySQL
+- OpenAPI SpringDoc
+- AWS
