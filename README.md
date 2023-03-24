@@ -14,3 +14,11 @@
 - JWT
 - MySQL
 - OpenAPI SpringDoc
+
+## To run on your own computer
+1. Install MySQL.
+2. Configure datasource credentials in application.properties.
+3. Open two console in the path of the backend and the frontend app.
+4. Run `mvnw install` or `./mvnw install` in Unix System.
+5. Run `mvnw spring-boot:run` or `./mvnw spring-boot:run` in Unix System.
+6. The frontend app is running on localhost:8081, and the backend app is running on localhost:8080.
