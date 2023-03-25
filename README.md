@@ -1,5 +1,5 @@
 # CRM Application Backend
-#### A REST API that provides functionalities such as login, signup and CRUD operations to [the frontend side](https://github.com/mslmtrk/Crm-Application-Frontend) of the application. It has been deployed to AWS.
+#### This is a REST API that provides functionalities such as login, signup and CRUD operations to [the frontend side](https://github.com/mslmtrk/Crm-Application-Frontend) of the application. It has been deployed to AWS.
 
 #### Live App: http://crm-frontend.eu-central-1.elasticbeanstalk.com/
 
@@ -9,14 +9,15 @@
 - Java 11
 - Spring Boot
 - Spring Security
+- JWT
 - Hibernate
 - Spring Data JPA
-- JWT
-- MySQL
+- PostgreSQL
+- Maven
 - OpenAPI SpringDoc
 
 ## To run on your own computer
-1. Install MySQL.
+1. Install PostgreSQL.
 2. Configure datasource credentials in application.properties.
 3. Open two console in the path of the backend and the frontend app.
 4. Run `mvnw install` or `./mvnw install` in Unix System.
