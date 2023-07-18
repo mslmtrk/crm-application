@@ -1,5 +1,5 @@
 # CRM Application
-#### In this application users can log in and sign-up. Authenticated users can process CRUD operations on customers.
+#### In this application users can log in and sign-up. Authenticated users can operate CRUD operations on customers.
 #### The App is hosted on AWS.
 #### Live Application: http://crm-frontend.eu-central-1.elasticbeanstalk.com/
 #### Live API Documentation: http://crm-backend.eu-central-1.elasticbeanstalk.com/api/swagger-ui/index.html
