@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+	<title> List of Customers </title>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<div>	
+			<a th:href="@{/login}" class="btn btn-primary" id="login">Log In</a>		
+			<a th:href="@{/auth/logout}" class="btn btn-light" id="logout"><i class="fa fa-power-off"></i> Log Out</a>
+			
+			<p id="username">Admin: <span th:text="${session.username}" style="font-style: italic; "></span></p>
+	
+			<h4 style="margin-top:15px;"> List of Customers </h4 >				
+		</div>
+		
+		<hr>
+		
+		<input type=button value="Add Customer"
+			onclick="window.location.href='customer-form'"
+			class="button"/>
+		
+		<table class="table table-bordered table-striped" id="listTable">
+		<caption>List of customers</caption>
+			<thead class="thead-dark">
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Action</th>
+				</tr>
+			</thead >
+			
+			<tbody>
+				<tr th:each="tempCustomer : ${customers}">
+					<td th:text="${tempCustomer.firstName}"/>
+					<td th:text="${tempCustomer.lastName}"/>
+					<td th:text="${tempCustomer.email}"/>
+					<td>
+					<a th:href="@{/update-customer(customerId=${tempCustomer.id})}"
+						class="btn btn-info btn-sm">Update</a>
+					|
+					<a th:href="@{/delete-customer(customerId=${tempCustomer.id})}"
+					onclick="if (!(confirm('Are you sure?'))) return false"
+						class="btn btn-danger btn-sm">Delete</a>
+					</td>
+				</tr>
+			</tbody>	
+		</table>
+	</div>
+	
+	<script th:inline="javascript">				
+	
+		var name = /*[[${session.username}]]*/ 'default';
+		
+		var expiryDate = new Date(/*[[${session.expiryDate}]]*/ 'default');
+		var now = new Date;
+		
+		if(name == "null" || name == null || name == "" || name == undefined || now.getTime() > expiryDate.getTime()){			
+    		$('#username').hide();
+    		$('#logout').hide();
+    		$('#login').show(); 
+    	}
+    	else{
+			$('#login').hide();
+			$('#username').show(); 
+			$('#logout').show(); 
+		}
+			
+	</script>
+		
+</body>
+
+</html>

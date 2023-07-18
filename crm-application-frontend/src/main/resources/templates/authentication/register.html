@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+	<title>Register - Crm</title>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/authenticationStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<h4 style="margin-top:15px"><i class="fa fa-id-card-o"></i> Sign Up</h4 >
+		<hr>
+	
+		<form th:action="@{/auth/signup}" th:object="${signupRequest}" method="post" >
+			
+			<table id="formTable">
+			<tbody>
+				<tr>
+					<td></td>
+					<td><span th:text="${message}" class="error"></span ></td>
+				</tr>
+				<tr>
+					<td><label>Username:</label></td>
+					<td><input name="username" type="text" th:field="*{username}" /></td>
+					<td><p th:if="${#fields.hasErrors('username')}" th:errors="*{username}"  class="error" /></td>
+				</tr>
+					
+				<tr>
+					<td><label>Password:</label></td>
+					<td><input name="password" type="password" th:field="*{password}" /></td>
+					<td><p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error" /></td>
+				</tr>	
+				
+				<tr>
+					<td><label></label></td>
+					<td><input type="submit" value="Sign Up" class="save"/></td>
+				</tr>
+				<tr>
+					<td><label></label></td>
+					<td><p id="signupText"><a href="/login">I have an account!</a></p ></td>
+				</tr>
+			</tbody>
+			</table  >
+		</form >
+		
+		<p style="margin-top:30px;">
+			<a th:href="@{/}">Back to List</a>
+		</p >
+		
+	</div>
+</body>
+
+</html>

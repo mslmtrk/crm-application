@@ -1,0 +1,78 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: crm_db
+    volumes:
+      - ./postgres-volume:/var/lib/postgresql/data
+    restart: always
+    networks:
+      crm-application:
+
+  spring-cloud-config-server:
+    image: mslmtrk/crm-spring-cloud-config-server:0.0.1-SNAPSHOT
+    ports:
+      - "8888:8888"
+    restart: always
+    networks:
+      crm-application:
+
+  naming-server:
+    image: mslmtrk/crm-naming-server:0.0.1-SNAPSHOT
+    ports:
+      - "8761:8761"
+    environment:
+      SPRING.CONFIG.IMPORT: optional:configserver:http://root:s3cr3t@localhost:8888
+    depends_on:
+      - spring-cloud-config-server
+    restart: always
+    networks:
+      crm-application:
+
+  crm-backend:
+    image: mslmtrk/crm-application-backend:0.0.1-RELEASE
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/crm_db
+      DB_USERNAME: postgres
+      DB_PASSWORD: password
+      EUREKA.CLIENT.SERVICE-URL.DEFAULTZONE: http://naming-server:8761/eureka
+      SPRING.CONFIG.IMPORT: optional:configserver:http://root:s3cr3t@spring-cloud-config-server:8888
+      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
+    depends_on:
+      - db
+      - naming-server
+    restart: always
+    networks:
+      crm-application:
+
+  crm-frontend:
+    image: mslmtrk/crm-application-frontend:0.0.1-RELEASE
+    ports:
+      - "8081:8081"
+    environment:
+      EUREKA.CLIENT.SERVICE-URL.DEFAULTZONE: http://naming-server:8761/eureka
+      SPRING.CONFIG.IMPORT: optional:configserver:http://root:s3cr3t@spring-cloud-config-server:8888
+      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
+    depends_on:
+      - crm-backend
+    restart: always
+    networks:
+      crm-application:
+
+  zipkin-server:
+    image: openzipkin/zipkin:2.23
+    restart: always
+    ports:
+      - "9411:9411"
+    networks:
+      - crm-application
+
+networks:
+  crm-application:
