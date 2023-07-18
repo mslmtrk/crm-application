@@ -1,12 +1,18 @@
-# CRM Application Backend
-#### This is a REST API that provides functionalities such as login, signup and CRUD operations to [the frontend side](https://github.com/mslmtrk/Crm-Application-Frontend) of the application. It has been deployed to AWS.
-
+# CRM Application
+#### In this application users can log in and sign-up. Authenticated users can process CRUD operations on customers.
+#### The App is hosted on AWS.
 #### Live Application: http://crm-frontend.eu-central-1.elasticbeanstalk.com/
+#### Live API Documentation: http://crm-backend.eu-central-1.elasticbeanstalk.com/api/swagger-ui/index.html
 
-#### Live Api Documentation: http://crm-backend.eu-central-1.elasticbeanstalk.com/api/swagger-ui/index.html
+#### This application consists of four microservices:
+- CRM-Backend: A REST API that is the backend side of the application. Built using;
+- CRM-Frontend: Fronted side of the application that is built with Thymleaf. Built using;
+- Naming-Server: Eureka Naming Server for dynamic scaling and load balancing.
+- Spring Cloud Config Server: For Centralized Microservices Configurations.
 
 ## Technologies
-- Java 11
+#### Backend
+- Java 17
 - Spring Boot
 - Spring Security
 - JWT
@@ -14,12 +20,23 @@
 - Spring Data JPA
 - PostgreSQL
 - Maven
+- Lombok
 - OpenAPI SpringDoc
-
-## To run on your own computer
-1. Install PostgreSQL.
-2. Configure datasource credentials in application.properties.
-3. Open two console in the path of the backend and the frontend app.
-4. Run `mvnw install` or `./mvnw install` in Unix System.
-5. Run `mvnw spring-boot:run` or `./mvnw spring-boot:run` in Unix System.
-6. The frontend app is running on localhost:8081, and the backend app is running on localhost:8080.
+- Resilience4j
+#### Frontend
+- Spring MVC
+- Thymeleaf
+- HTML, CSS
+- JavaScript
+- Bootstrap
+- Hibernate Validator
+- OpenFeign
+#### Other
+- Spring Cloud
+- Zipkin
+- Docker
+  
+## How to Run
+1. Just clone the repository and run `docker compose up`.
+2. The app running app: http://localhost:8081
+3. The API documentation: http://localhost:8080/api/swagger-ui/index.html
