@@ -40,5 +40,5 @@
   
 ## How to Run
 1. Just clone the repository and run `docker compose up`. Make sure Docker Desktop is up and running.
-2. The app running app: http://localhost:8081
+2. The running app: http://localhost:8081
 3. The API documentation: http://localhost:8080/api/swagger-ui/index.html
