@@ -17,6 +17,7 @@
 - Java 17
 - Spring Boot
 - Spring Security
+- Spring Cloud
 - JWT
 - Hibernate
 - Spring Data JPA
@@ -28,13 +29,12 @@
 #### Frontend
 - Spring MVC
 - Thymeleaf
-- HTML, CSS
 - JavaScript
+- HTML, CSS
 - Bootstrap
 - Hibernate Validator
 - OpenFeign
 #### Other
-- Spring Cloud
 - Zipkin
 - Docker
   
