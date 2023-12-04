@@ -7,10 +7,10 @@
 ![Screenshot_10](https://github.com/mslmtrk/crm-application/assets/60064079/3fa4948b-e89b-4da3-87cf-b6cef041e5d1)
 
 #### This application consists of four microservices:
-- CRM-Backend: A REST API that is the backend side of the application.
-- CRM-Frontend: Fronted side of the application that is built with Thymleaf.
-- Naming-Server: Eureka Naming Server for dynamic scaling and load balancing.
-- Spring Cloud Config Server: For Centralized Microservices Configurations.
+- CRM-Backend: A REST API that is on the backend side of the application.
+- CRM-Frontend: The fronted side of the application that is built with Thymleaf.
+- Naming-Server: Eureka Naming Server for service registry.
+- Spring Cloud Config Server: For centralized configuration management.
 
 ## Technologies
 #### Backend
