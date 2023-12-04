@@ -9,7 +9,7 @@
 #### This application consists of four microservices:
 - CRM-Backend: A REST API that is on the backend side of the application.
 - CRM-Frontend: The fronted side of the application that is built with Thymleaf.
-- Naming-Server: Eureka Naming Server for service registry.
+- Naming-Server: Eureka naming server for service registry, discovery, and load balancing.
 - Spring Cloud Config Server: For centralized configuration management.
 
 ## Technologies
