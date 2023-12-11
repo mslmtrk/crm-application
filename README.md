@@ -2,6 +2,7 @@
 [![Spring-Cloud-Config-Server CI/CD](https://github.com/mslmtrk/crm-application/actions/workflows/spring-cloud-config-server.yml/badge.svg)](https://github.com/mslmtrk/crm-application/actions/workflows/spring-cloud-config-server.yml)
 [![Naming-Server CI/CD](https://github.com/mslmtrk/crm-application/actions/workflows/naming-server.yml/badge.svg)](https://github.com/mslmtrk/crm-application/actions/workflows/naming-server.yml)
 [![CRM-Application-Backend CI/CD](https://github.com/mslmtrk/crm-application/actions/workflows/crm-application-backend.yml/badge.svg)](https://github.com/mslmtrk/crm-application/actions/workflows/crm-application-backend.yml)
+[![CRM-Application-Frontend CI/CD](https://github.com/mslmtrk/crm-application/actions/workflows/crm-application-frontend.yml/badge.svg)](https://github.com/mslmtrk/crm-application/actions/workflows/crm-application-frontend.yml)
 #### In this application users can log in and sign-up. Authenticated users can operate CRUD operations on customers.
 #### The App is hosted on AWS: [Live Application](http://crm-frontend.eu-central-1.elasticbeanstalk.com), [Live API Documentation](http://crm-backend.eu-central-1.elasticbeanstalk.com/api/swagger-ui/index.html).
 
