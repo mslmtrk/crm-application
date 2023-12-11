@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    name: Build Spring Boot App
+    name: Build and Publish Docker Image
     runs-on: ubuntu-latest
 
     steps:
