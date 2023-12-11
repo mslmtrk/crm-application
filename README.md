@@ -3,8 +3,8 @@
 [![Naming-Server CI/CD](https://github.com/mslmtrk/crm-application/actions/workflows/naming-server.yml/badge.svg)](https://github.com/mslmtrk/crm-application/actions/workflows/naming-server.yml)
 [![CRM-Application-Backend CI/CD](https://github.com/mslmtrk/crm-application/actions/workflows/crm-application-backend.yml/badge.svg)](https://github.com/mslmtrk/crm-application/actions/workflows/crm-application-backend.yml)
 [![CRM-Application-Frontend CI/CD](https://github.com/mslmtrk/crm-application/actions/workflows/crm-application-frontend.yml/badge.svg)](https://github.com/mslmtrk/crm-application/actions/workflows/crm-application-frontend.yml)
-#### In this application users can log in and sign-up. Authenticated users can operate CRUD operations on customers.
-#### The App is hosted on AWS: [Live Application](http://crm-frontend.eu-central-1.elasticbeanstalk.com), [Live API Documentation](http://crm-backend.eu-central-1.elasticbeanstalk.com/api/swagger-ui/index.html).
+#### With the application, users can sign in and sign up. Authenticated users can perform CRUD operations on customers.
+#### The application is hosted on AWS: [Live Application](http://crm-frontend.eu-central-1.elasticbeanstalk.com), [Live API Documentation](http://crm-backend.eu-central-1.elasticbeanstalk.com/api/swagger-ui/index.html).
 
 ![Screenshot_10](https://github.com/mslmtrk/crm-application/assets/60064079/3fa4948b-e89b-4da3-87cf-b6cef041e5d1)
 
