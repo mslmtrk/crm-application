@@ -11,8 +11,8 @@ on:
       - "spring-cloud-config-server/**"
 
 jobs:
-
   build:
+    name: Build Spring Boot App
     runs-on: ubuntu-latest
 
     steps:
@@ -29,8 +29,14 @@ jobs:
       run: mvn -B package -f spring-cloud-config-server
       
   docker:
+    name: Publish Docker Image
+    needs: build
     runs-on: ubuntu-latest
+
     steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
