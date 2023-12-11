@@ -15,7 +15,7 @@ services:
       crm-application:
 
   spring-cloud-config-server:
-    image: mslmtrk/crm-spring-cloud-config-server:0.0.1-SNAPSHOT
+    image: mslmtrk/crm-spring-cloud-config-server:latest
     ports:
       - "8888:8888"
     restart: always
@@ -23,7 +23,7 @@ services:
       crm-application:
 
   naming-server:
-    image: mslmtrk/crm-naming-server:0.0.1-SNAPSHOT
+    image: mslmtrk/crm-naming-server:latest
     ports:
       - "8761:8761"
     environment:
@@ -35,7 +35,7 @@ services:
       crm-application:
 
   crm-backend:
-    image: mslmtrk/crm-application-backend:0.0.1-RELEASE
+    image: mslmtrk/crm-application-backend:latest
     ports:
       - "8080:8080"
     environment:
@@ -53,7 +53,7 @@ services:
       crm-application:
 
   crm-frontend:
-    image: mslmtrk/crm-application-frontend:0.0.1-RELEASE
+    image: mslmtrk/crm-application-frontend:latest
     ports:
       - "8081:8081"
     environment:
