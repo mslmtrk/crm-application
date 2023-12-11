@@ -47,6 +47,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v5
         with:
+          context: ./spring-cloud-config-server
           push: true
           tags: mslmtrk/crm-spring-cloud-config-server:latest
     
