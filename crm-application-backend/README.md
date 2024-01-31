@@ -6,11 +6,12 @@
 #### Live Api Documentation: http://crm-backend.eu-central-1.elasticbeanstalk.com/api/swagger-ui/index.html
 
 ## Technologies
-- Java 11
+- Java 17
 - Spring Boot
 - Spring Security
 - Hibernate
 - Spring Data JPA
+- Maven
 - JWT
 - MySQL
 - OpenAPI SpringDoc
