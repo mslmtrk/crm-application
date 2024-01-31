@@ -9,22 +9,13 @@ Live Crm-App-Rest documentation: https://crm-app-rest.herokuapp.com/swagger-ui.h
 ![Screenshot_1](https://user-images.githubusercontent.com/60064079/179352987-99b0cc08-90df-404b-8a10-bd3329bb5613.png)
 
 ## Technologies
-**Backend**
-- Java 11
-- Spring Boot
-- Spring Security
-- Hibernate
-- JWT Authentication
-- Spring Data JPA
-- MySQL(PostgreSQL on Heroku)
-
-**Frontend**
-- Java 11
 - Spring MVC
 - Thymeleaf
-- Java Bean Validation
 - JavaScript
+- HTML, CSS
 - Bootstrap
+- Hibernate Validator
+- OpenFeign
 
 ## To run on your own computer
 1. Install MySQL
